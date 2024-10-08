@@ -20,6 +20,7 @@ limitations under the License.
   <meta name="viewport" content="width=1024">
   <meta name="keywords" content="neural networks,machine learning,javascript">
 
+  <!-- English meta tags -->
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="Tensorflow — Neural Network Playground"/>
   <meta property="og:description" content="Tinker with a real neural network right here in your browser.">
@@ -33,6 +34,13 @@ limitations under the License.
   <meta name="twitter:image" content="http://playground.tensorflow.org/preview.png">
   <meta name="twitter:image:width" content="560">
   <meta name="twitter:image:height" content="295">
+
+  <!-- Catalan meta tags -->
+  <meta property="og:title" content="Tensorflow — Espai d'experimentació amb Xarxes Neuronals" lang="ca"/>
+  <meta property="og:description" content="Experimenta amb una xarxa neuronal real aquí mateix al teu navegador." lang="ca">
+
+  <meta name="twitter:title" content="Tensorflow — Espai d'experimentació amb Xarxes Neuronals" lang="ca">
+  <meta name="twitter:description" content="Experimenta amb una xarxa neuronal real aquí mateix al teu navegador." lang="ca">
 
   <meta name="author" content="Daniel Smilkov and Shan Carter">
   <title data-i18n="title"></title>
@@ -183,7 +191,7 @@ limitations under the License.
         </div>
         <div class="ui-noise">
           <label for="noise">
-            <span data-i18n="data.noise"></span>
+            <span data-i18n="data.noise"></span>:
             <span class="value">XX</span>
           </label>
           <p class="slider">
@@ -192,7 +200,7 @@ limitations under the License.
         </div>
         <div class="ui-batchSize">
           <label for="batchSize">
-            <span data-i18n="data.batchSize"></span>
+            <span data-i18n="data.batchSize"></span>:
             <span class="value">XX</span>
           </label>
           <p class="slider">
@@ -217,8 +225,8 @@ limitations under the License.
         </svg>
         <!-- Hover card -->
         <div id="hovercard">
-          <div style="font-size:10px">Click anywhere to edit.</div>
-          <div><span class="type">Weight/Bias</span> is <span class="value">0.2</span><span><input type="number"/></span>.</div>
+          <div style="font-size:10px" data-i18n="hovercard.clickToEdit"></div>
+          <div><span class="type" data-i18n="hovercard.weightBias"></span> is <span class="value">0.2</span><span><input type="number"/></span>.</div>
         </div>
         <div class="callout thumbnail">
           <svg viewBox="0 0 30 30">
@@ -229,9 +237,7 @@ limitations under the License.
             </defs>
             <path d="M12,30C5,20 2,15 12,0" marker-end="url(#arrow)">
           </svg>
-          <div class="label">
-            This is the output from one <b>neuron</b>. Hover to see it larger.
-          </div>
+          <div class="label" data-i18n="features.neuronOutput"></div>
         </div>
         <div class="callout weights">
           <svg viewBox="0 0 30 30">
@@ -242,9 +248,7 @@ limitations under the License.
             </defs>
             <path d="M12,30C5,20 2,15 12,0" marker-end="url(#arrow)">
           </svg>
-          <div class="label">
-            The outputs are mixed with varying <b>weights</b>, shown by the thickness of the lines.
-          </div>
+          <div class="label" data-i18n="features.weightMixing"></div>
         </div>
       </div>
     </div>
@@ -351,6 +355,7 @@ limitations under the License.
     <div class="l--body">
       <h2 data-i18n="article.credits.title"></h2>
       <p data-i18n="article.credits.content"></p>
+      <p data-i18n="article.credits.translation"></p>
     </div>
   </article>
 
@@ -394,6 +399,41 @@ limitations under the License.
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (key) {
+          element.innerHTML = window.i18next.t(key);
+        }
+      });
+    });
+  </script>
+
+  <!-- Language switcher -->
+  <div style="position: fixed; bottom: 10px; right: 10px;">
+    <select id="language-select">
+      <option value="ca">Català</option>
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const languageSelect = document.getElementById('language-select');
+      
+      languageSelect.addEventListener('change', (event) => {
+        const newLang = event.target.value;
+        window.i18next.changeLanguage(newLang, () => {
+          document.querySelectorAll('[data-i18n]').forEach((element) => {
+            const key = element.getAttribute('data-i18n');
+            if (key) {
+              element.innerHTML = window.i18next.t(key);
+            }
+          });
+        });
+      });
+
+      // Initial translation
       document.querySelectorAll('[data-i18n]').forEach((element) => {
         const key = element.getAttribute('data-i18n');
         if (key) {

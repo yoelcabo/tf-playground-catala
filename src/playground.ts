@@ -74,21 +74,21 @@ let INPUTS: {[name: string]: InputFeature} = {
 };
 
 let HIDABLE_CONTROLS = [
-  ["Show test data", "showTestData"],
-  ["Discretize output", "discretize"],
-  ["Play button", "playButton"],
-  ["Step button", "stepButton"],
-  ["Reset button", "resetButton"],
-  ["Learning rate", "learningRate"],
-  ["Activation", "activation"],
-  ["Regularization", "regularization"],
-  ["Regularization rate", "regularizationRate"],
-  ["Problem type", "problem"],
-  ["Which dataset", "dataset"],
-  ["Ratio train data", "percTrainData"],
-  ["Noise level", "noise"],
-  ["Batch size", "batchSize"],
-  ["# of hidden layers", "numHiddenLayers"],
+  ["output.showTestData", "showTestData"],
+  ["output.discretize", "discretize"],
+  ["controls.playButton", "playButton"],
+  ["controls.stepButton", "stepButton"],
+  ["controls.resetButton", "resetButton"],
+  ["controls.learningRate", "learningRate"],
+  ["controls.activation", "activation"],
+  ["controls.regularization", "regularization"],
+  ["controls.regularizationRate", "regularizationRate"],
+  ["controls.problemType", "problem"],
+  ["data.whichDatasetShort", "dataset"],
+  ["data.percTrainDataShort", "percTrainData"],
+  ["data.noise", "noise"],
+  ["data.batchSize", "batchSize"],
+  ["hiddenLayers.label", "numHiddenLayers"],
 ];
 
 class Player {
@@ -1059,7 +1059,7 @@ function hideControls() {
     });
     label.append("span")
       .attr("class", "mdl-checkbox__label label")
-      .text(text);
+      .attr("data-i18n", text);
   });
   d3.select(".hide-controls-link")
     .attr("href", window.location.href);

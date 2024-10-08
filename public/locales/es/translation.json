@@ -1,0 +1,90 @@
+{
+  "title": "Espacio de experimentación con Redes Neuronales",
+  "header": {
+    "title": "Experimenta con una <b>Red Neuronal</b> <span class='optional'>aquí mismo </span>en tu navegador.<br>No te preocupes, no se romperá. Te lo prometemos."
+  },
+  "controls": {
+    "epoch": "Época",
+    "learningRate": "Tasa de aprendizaje",
+    "activation": "Activación",
+    "relu": "ReLU",
+    "tanh": "Tanh",
+    "sigmoid": "Sigmoide",
+    "linear": "Lineal",
+    "regularization": "Regularización",
+    "none": "Ninguna",
+    "L1": "L1",
+    "L2": "L2",
+    "regularizationRate": "Tasa de regularización",
+    "problemType": "Tipo de problema",
+    "classification": "Clasificación",
+    "regression": "Regresión",
+    "playButton": "Botón de play",
+    "stepButton": "Botón de avanzar",
+    "resetButton": "Botón de reset"
+  },
+  "data": {
+    "title": "Datos",
+    "whichDataset": "¿Qué conjunto de datos quieres usar?",
+    "whichDatasetShort": "Conjunto de datos",
+    "circle": "Círculo",
+    "exclusiveOr": "XOR",
+    "gaussian": "Gaussiano",
+    "spiral": "Espiral",
+    "plane": "Plano",
+    "multiGaussian": "Multi gaussiano",
+    "percTrainData": "Proporción de datos de entrenamiento a datos de prueba:",
+    "percTrainDataShort": "Proporción de datos",
+    "noise": "Ruido",
+    "batchSize": "Tamaño del lote",
+    "regenerate": "Regenerar"
+  },
+  "features": {
+    "title": "Características",
+    "description": "¿Qué propiedades quieres introducir?",
+    "neuronOutput": "Esta es la salida de una <b>neurona</b>. Pasa el ratón por encima para verla más grande.",
+    "weightMixing": "Las salidas se mezclan con diferentes <b>pesos</b>, mostrados por el grosor de las líneas."
+  },
+  "hiddenLayers": {
+    "label": "Capas ocultas"
+  },
+  "output": {
+    "title": "Salida",
+    "testLoss": "Pérdida de prueba",
+    "trainingLoss": "Pérdida de entrenamiento",
+    "colorExplanation": "Los colores muestran los valores de los datos, neuronas y pesos.",
+    "showTestData": "Mostrar datos de prueba",
+    "discretize": "Discretizar la salida"
+  },
+  "article": {
+    "whatIsNeuralNetwork": {
+      "title": "¿Qué es una Red Neuronal?",
+      "content": "Es una técnica para construir un programa de ordenador que aprende de los datos. Se basa vagamente en cómo creemos que funciona el cerebro humano. Primero, se crea una colección de \"neuronas\" digitales y se conectan entre sí, permitiendo que se envíen mensajes. A continuación, se pide a la red que resuelva un problema, lo que intenta hacer una y otra vez, cada vez fortaleciendo las conexiones que llevan al éxito y disminuyendo las que llevan al fracaso. Para una introducción más detallada a las redes neuronales, el libro de Michael Nielsen <a href=\"http://neuralnetworksanddeeplearning.com/index.html\">Neural Networks and Deep Learning</a> es un buen lugar para empezar. Para una visión general más técnica, prueba <a href=\"http://www.deeplearningbook.org/\">Deep Learning</a> de Ian Goodfellow, Yoshua Bengio y Aaron Courville."
+    },
+    "canIReuse": {
+      "title": "Me encanta, ¿puedo reutilizarlo?",
+      "content1": "¡Adelante! Lo hemos publicado como código abierto en <a href=\"https://github.com/tensorflow/playground\">GitHub</a> con la esperanza de que pueda hacer las redes neuronales un poco más accesibles y fáciles de aprender. Eres libre de utilizarlo de cualquier manera que siga nuestra <a href=\"https://github.com/tensorflow/playground/blob/master/LICENSE\">Licencia Apache</a>. Y si tienes alguna sugerencia para adiciones o cambios, por favor <a href=\"https://github.com/tensorflow/playground/issues\">háganoslo saber</a>. La traducción al español la encontrarás <a href=\"https://github.com/yoelcabo/tf-playground-catala\">aquí</a>.",
+      "content2": "También hemos proporcionado algunos controles abajo para permitirte adaptar el espacio de juego a un tema o lección específica. Solo elige qué características quieres que sean visibles abajo y luego guarda <a class=\"hide-controls-link\" href=\"#\">este enlace</a>, o <a href=\"javascript:location.reload();\">refresca</a> la página."
+    },
+    "colorMeaning": {
+      "title": "¿Qué significan todos estos colores?",
+      "content1": "El naranja y el azul se utilizan a lo largo de la visualización de maneras ligeramente diferentes, pero en general el naranja muestra valores negativos mientras que el azul muestra valores positivos.",
+      "content2": "Los puntos de datos (representados por pequeños círculos) están inicialmente coloreados en naranja o azul, que corresponden a 1 y -1.",
+      "content3": "En las capas ocultas, las líneas están coloreadas por los pesos de las conexiones entre neuronas. El azul muestra un peso positivo, lo que significa que la red está utilizando esa salida de la neurona tal como se da. Una línea naranja muestra que la red está asignando un peso negativo.",
+      "content4": "En la capa de salida, los puntos están coloreados en naranja o azul dependiendo de sus valores originales. El color de fondo muestra lo que la red está prediciendo para un área particular. La intensidad del color muestra cuán confiada es esa predicción."
+    },
+    "whatLibrary": {
+      "title": "¿Qué biblioteca habéis utilizado?",
+      "content": "Hemos creado una pequeña <a href=\"https://github.com/tensorflow/playground/blob/master/src/nn.ts\">biblioteca</a> de redes neuronales que cumple con las demandas de esta visualización educativa. Para aplicaciones más serias, considera la biblioteca <a href=\"https://www.tensorflow.org/\">TensorFlow</a>."
+    },
+    "credits": {
+      "title": "Créditos",
+      "content": "El playground fue creado por Daniel Smilkov y Shan Carter. Es una continuación del trabajo previo de muchas personas — más notablemente la <a href=\"http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html\">demo de convnet.js</a> de Andrej Karpathy y los <a href=\"http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/\">artículos</a> de Chris Olah sobre redes neuronales. Muchas gracias también a D. Sculley por la ayuda con la idea original y a Fernanda Viégas y Martin Wattenberg y el resto de sus equipos en <a href=\"https://research.google.com/bigpicture/\">Big Picture</a> y <a href=\"https://research.google.com/teams/brain/\">Google Brain</a> por los comentarios y orientación.",
+      "translation": "La traducción al español es cortesía de <a href=\"https://yoel.cat\">Yoel Cabo</a>."
+    }
+  },
+  "hovercard": {
+    "clickToEdit": "Haz clic en cualquier lugar para editar.",
+    "weightBias": "Peso/Sesgo"
+  }
+}

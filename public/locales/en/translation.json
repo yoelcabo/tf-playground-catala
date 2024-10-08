@@ -18,11 +18,15 @@
     "regularizationRate": "Regularization rate",
     "problemType": "Problem type",
     "classification": "Classification",
-    "regression": "Regression"
+    "regression": "Regression",
+    "playButton": "Play button",
+    "stepButton": "Step button",
+    "resetButton": "Reset button"
   },
   "data": {
     "title": "Data",
     "whichDataset": "Which dataset do you want to use?",
+    "whichDatasetShort": "Which dataset",
     "circle": "Circle",
     "exclusiveOr": "Exclusive or",
     "gaussian": "Gaussian",
@@ -30,13 +34,16 @@
     "plane": "Plane",
     "multiGaussian": "Multi gaussian",
     "percTrainData": "Ratio of training to test data:",
-    "noise": "Noise:",
-    "batchSize": "Batch size:",
+    "percTrainDataShort": "Ratio train data",
+    "noise": "Noise",
+    "batchSize": "Batch size",
     "regenerate": "Regenerate"
   },
   "features": {
     "title": "Features",
-    "description": "Which properties do you want to feed in?"
+    "description": "Which properties do you want to feed in?",
+    "neuronOutput": "This is the output from one <b>neuron</b>. Hover to see it larger.",
+    "weightMixing": "The outputs are mixed with varying <b>weights</b>, shown by the thickness of the lines."
   },
   "hiddenLayers": {
     "label": "Hidden layers"
@@ -45,7 +52,7 @@
     "title": "Output",
     "testLoss": "Test loss",
     "trainingLoss": "Training loss",
-    "colorExplanation": "Colors shows data, neuron and weight values.",
+    "colorExplanation": "Colors show data, neuron and weight values.",
     "showTestData": "Show test data",
     "discretize": "Discretize output"
   },
@@ -72,7 +79,12 @@
     },
     "credits": {
       "title": "Credits",
-      "content": "This was created by Daniel Smilkov and Shan Carter. This is a continuation of many people's previous work — most notably Andrej Karpathy's <a href=\"http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html\">convnet.js demo</a> and Chris Olah's <a href=\"http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/\">articles</a> about neural networks. Many thanks also to D. Sculley for help with the original idea and to Fernanda Viégas and Martin Wattenberg and the rest of the <a href=\"https://research.google.com/bigpicture/\">Big Picture</a> and <a href=\"https://research.google.com/teams/brain/\">Google Brain</a> teams for feedback and guidance."
+      "content": "This was created by Daniel Smilkov and Shan Carter. This is a continuation of many people's previous work — most notably Andrej Karpathy's <a href=\"http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html\">convnet.js demo</a> and Chris Olah's <a href=\"http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/\">articles</a> about neural networks. Many thanks also to D. Sculley for help with the original idea and to Fernanda Viégas and Martin Wattenberg and the rest of the <a href=\"https://research.google.com/bigpicture/\">Big Picture</a> and <a href=\"https://research.google.com/teams/brain/\">Google Brain</a> teams for feedback and guidance.",
+      "translation": ""
     }
+  },
+  "hovercard": {
+    "clickToEdit": "Click anywhere to edit.",
+    "weightBias": "Weight/Bias"
   }
 }
