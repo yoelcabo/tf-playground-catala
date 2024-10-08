@@ -35,7 +35,7 @@ limitations under the License.
   <meta name="twitter:image:height" content="295">
 
   <meta name="author" content="Daniel Smilkov and Shan Carter">
-  <title>A Neural Network Playground</title>
+  <title data-i18n="title"></title>
   <link rel="stylesheet" href="bundle.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons" rel="stylesheet" type="text/css">
   <script src="lib.js"></script>
@@ -50,7 +50,7 @@ limitations under the License.
   </a>
   <!-- Header -->
   <header>
-    <h1 class="l--page">Tinker With a <b>Neural Network</b> <span class="optional">Right Here </span>in Your Browser.<br>Don’t Worry, You Can’t Break It. We Promise.</h1>
+    <h1 class="l--page" data-i18n="header.title"></h1>
   </header>
 
   <!-- Top Controls -->
@@ -69,11 +69,11 @@ limitations under the License.
         </button>
       </div>
       <div class="control">
-        <span class="label">Epoch</span>
+        <span class="label" data-i18n="controls.epoch"></span>
         <span class="value" id="iter-number"></span>
       </div>
       <div class="control ui-learningRate">
-        <label for="learningRate">Learning rate</label>
+        <label for="learningRate" data-i18n="controls.learningRate"></label>
         <div class="select">
           <select id="learningRate">
             <option value="0.00001">0.00001</option>
@@ -91,28 +91,28 @@ limitations under the License.
         </div>
       </div>
       <div class="control ui-activation">
-        <label for="activations">Activation</label>
+        <label for="activations" data-i18n="controls.activation"></label>
         <div class="select">
           <select id="activations">
-            <option value="relu">ReLU</option>
-            <option value="tanh">Tanh</option>
-            <option value="sigmoid">Sigmoid</option>
-            <option value="linear">Linear</option>
+            <option value="relu" data-i18n="controls.relu"></option>
+            <option value="tanh" data-i18n="controls.tanh"></option>
+            <option value="sigmoid" data-i18n="controls.sigmoid"></option>
+            <option value="linear" data-i18n="controls.linear"></option>
           </select>
         </div>
       </div>
       <div class="control ui-regularization">
-        <label for="regularizations">Regularization</label>
+        <label for="regularizations" data-i18n="controls.regularization"></label>
         <div class="select">
           <select id="regularizations">
-            <option value="none">None</option>
-            <option value="L1">L1</option>
-            <option value="L2">L2</option>
+            <option value="none" data-i18n="controls.none"></option>
+            <option value="L1" data-i18n="controls.L1"></option>
+            <option value="L2" data-i18n="controls.L2"></option>
           </select>
         </div>
       </div>
       <div class="control ui-regularizationRate">
-        <label for="regularRate">Regularization rate</label>
+        <label for="regularRate" data-i18n="controls.regularizationRate"></label>
         <div class="select">
           <select id="regularRate">
             <option value="0">0</option>
@@ -129,11 +129,11 @@ limitations under the License.
         </div>
       </div>
       <div class="control ui-problem">
-        <label for="problem">Problem type</label>
+        <label for="problem" data-i18n="controls.problemType"></label>
         <div class="select">
           <select id="problem">
-            <option value="classification">Classification</option>
-            <option value="regression">Regression</option>
+            <option value="classification" data-i18n="controls.classification"></option>
+            <option value="regression" data-i18n="controls.regression"></option>
           </select>
         </div>
       </div>
@@ -146,60 +146,67 @@ limitations under the License.
     <!--  Data Column-->
     <div class="column data">
       <h4>
-        <span>Data</span>
+        <span data-i18n="data.title"></span>
       </h4>
       <div class="ui-dataset">
-        <p>Which dataset do you want to use?</p>
+        <p data-i18n="data.whichDataset"></p>
         <div class="dataset-list">
-          <div class="dataset" title="Circle">
+          <div class="dataset" data-i18n-title="data.circle">
             <canvas class="data-thumbnail" data-dataset="circle"></canvas>
           </div>
-          <div class="dataset" title="Exclusive or">
+          <div class="dataset" data-i18n-title="data.exclusiveOr">
             <canvas class="data-thumbnail" data-dataset="xor"></canvas>
           </div>
-          <div class="dataset" title="Gaussian">
+          <div class="dataset" data-i18n-title="data.gaussian">
             <canvas class="data-thumbnail" data-dataset="gauss"></canvas>
           </div>
-          <div class="dataset" title="Spiral">
+          <div class="dataset" data-i18n-title="data.spiral">
             <canvas class="data-thumbnail" data-dataset="spiral"></canvas>
           </div>
-          <div class="dataset" title="Plane">
+          <div class="dataset" data-i18n-title="data.plane">
             <canvas class="data-thumbnail" data-regDataset="reg-plane"></canvas>
           </div>
-          <div class="dataset" title="Multi gaussian">
+          <div class="dataset" data-i18n-title="data.multiGaussian">
             <canvas class="data-thumbnail" data-regDataset="reg-gauss"></canvas>
           </div>
         </div>
       </div>
       <div>
         <div class="ui-percTrainData">
-          <label for="percTrainData">Ratio of training to test data:&nbsp;&nbsp;<span class="value">XX</span>%</label>
+          <label for="percTrainData">
+            <span data-i18n="data.percTrainData"></span>
+            <span class="value">XX</span>%
+          </label>
           <p class="slider">
             <input class="mdl-slider mdl-js-slider" type="range" id="percTrainData" min="10" max="90" step="10">
           </p>
         </div>
         <div class="ui-noise">
-          <label for="noise">Noise:&nbsp;&nbsp;<span class="value">XX</span></label>
+          <label for="noise">
+            <span data-i18n="data.noise"></span>
+            <span class="value">XX</span>
+          </label>
           <p class="slider">
             <input class="mdl-slider mdl-js-slider" type="range" id="noise" min="0" max="50" step="5">
           </p>
         </div>
         <div class="ui-batchSize">
-          <label for="batchSize">Batch size:&nbsp;&nbsp;<span class="value">XX</span></label>
+          <label for="batchSize">
+            <span data-i18n="data.batchSize"></span>
+            <span class="value">XX</span>
+          </label>
           <p class="slider">
             <input class="mdl-slider mdl-js-slider" type="range" id="batchSize" min="1" max="30" step="1">
           </p>
         </div>
-          <button class="basic-button" id="data-regen-button" title="Regenerate data">
-            Regenerate
-          </button>
+        <button class="basic-button" id="data-regen-button" title="Regenerate data" data-i18n="data.regenerate"></button>
       </div>
     </div>
 
     <!-- Features Column -->
     <div class="column features">
-      <h4>Features</h4>
-      <p>Which properties do you want to feed in?</p>
+      <h4 data-i18n="features.title"></h4>
+      <p data-i18n="features.description"></p>
       <div id="network">
         <svg id="svg" width="510" height="450">
           <defs>
@@ -254,21 +261,21 @@ limitations under the License.
           </button>
         </div>
         <span id="num-layers"></span>
-        <span id="layers-label"></span>
+        <span id="layers-label" data-i18n="hiddenLayers.label"></span>
       </h4>
       <div class="bracket"></div>
     </div>
 
     <!-- Output Column -->
     <div class="column output">
-      <h4>Output</h4>
+      <h4 data-i18n="output.title"></h4>
       <div class="metrics">
         <div class="output-stats ui-percTrainData">
-          <span>Test loss</span>
+          <span data-i18n="output.testLoss"></span>
           <div class="value" id="loss-test"></div>
         </div>
         <div class="output-stats train">
-          <span>Training loss</span>
+          <span data-i18n="output.trainingLoss"></span>
           <div class="value" id="loss-train"></div>
         </div>
         <div id="linechart"></div>
@@ -276,11 +283,8 @@ limitations under the License.
       <div id="heatmap"></div>
       <div style="float:left;margin-top:20px">
         <div style="display:flex; align-items:center;">
-
           <!-- Gradient color scale -->
-          <div class="label" style="width:105px; margin-right: 10px">
-            Colors shows data, neuron and weight values.
-          </div>
+          <div class="label" style="width:105px; margin-right: 10px" data-i18n="output.colorExplanation"></div>
           <svg width="150" height="30" id="colormap">
             <defs>
               <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="100%">
@@ -298,11 +302,11 @@ limitations under the License.
         <div style="display:flex;">
           <label class="ui-showTestData mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="show-test-data">
             <input type="checkbox" id="show-test-data" class="mdl-checkbox__input" checked>
-            <span class="mdl-checkbox__label label">Show test data</span>
+            <span class="mdl-checkbox__label label" data-i18n="output.showTestData"></span>
           </label>
           <label class="ui-discretize mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="discretize">
             <input type="checkbox" id="discretize" class="mdl-checkbox__input" checked>
-            <span class="mdl-checkbox__label label">Discretize output</span>
+            <span class="mdl-checkbox__label label" data-i18n="output.discretize"></span>
           </label>
         </div>
       </div>
@@ -318,45 +322,35 @@ limitations under the License.
     </button>
   </div>
   <!-- Article -->
-
   <article id="article-text">
     <div class="l--body">
-      <h2>Um, What Is a Neural Network?</h2>
-      <p>It’s a technique for building a computer program that learns from data. It is based very loosely on how we think the human brain works. First, a collection of software “neurons” are created and connected together, allowing them to send messages to each other. Next, the network is asked to solve a problem, which it attempts to do over and over, each time strengthening the connections that lead to success and diminishing those that lead to failure. For a more detailed introduction to neural networks, Michael Nielsen’s <a href="http://neuralnetworksanddeeplearning.com/index.html">Neural Networks and Deep Learning</a> is a good place to start. For a more technical overview, try <a href="http://www.deeplearningbook.org/">Deep Learning</a> by Ian Goodfellow, Yoshua Bengio, and Aaron Courville.</p>
+      <h2 data-i18n="article.whatIsNeuralNetwork.title"></h2>
+      <p data-i18n="article.whatIsNeuralNetwork.content"></p>
     </div>
 
     <div class="l--body">
-      <h2>This Is Cool, Can I Repurpose It?</h2>
-      <p>Please do! We’ve open sourced it on <a href="https://github.com/tensorflow/playground">GitHub</a> with the hope that it can make neural networks a little more accessible and easier to learn. You’re free to use it in any way that follows our <a href="https://github.com/tensorflow/playground/blob/master/LICENSE">Apache License</a>. And if you have any suggestions for additions or changes, please <a href="https://github.com/tensorflow/playground/issues">let us know</a>.</p>
-      <p>We’ve also provided some controls below to enable you tailor the playground to a specific topic or lesson. Just choose which features you’d like to be visible below then save <a class="hide-controls-link" href="#">this link</a>, or <a href="javascript:location.reload();">refresh</a> the page.</p>
+      <h2 data-i18n="article.canIReuse.title"></h2>
+      <p data-i18n="article.canIReuse.content1"></p>
+      <p data-i18n="article.canIReuse.content2"></p>
       <div class="hide-controls"></div>
     </div>
 
     <div class="l--body">
-      <h2>What Do All the Colors Mean?</h2>
-      <p>Orange and blue are used throughout the visualization in slightly different ways, but in general orange shows negative values while blue shows positive values.</p>
-      <p>The data points (represented by small circles) are initially colored orange or blue, which correspond to positive one and negative one.</p>
-      <p>In the hidden layers, the lines are colored by the weights of the connections between neurons. Blue shows a positive weight, which means the network is using that output of the neuron as given. An orange line shows that the network is assiging a negative weight.</p>
-      <p>In the output layer, the dots are colored orange or blue depending on their original values. The background color shows what the network is predicting for a particular area. The intensity of the color shows how confident that prediction is.</p>
+      <h2 data-i18n="article.colorMeaning.title"></h2>
+      <p data-i18n="article.colorMeaning.content1"></p>
+      <p data-i18n="article.colorMeaning.content2"></p>
+      <p data-i18n="article.colorMeaning.content3"></p>
+      <p data-i18n="article.colorMeaning.content4"></p>
     </div>
 
     <div class="l--body">
-      <h2>What Library Are You Using?</h2>
-      <p>We wrote a tiny neural network <a href="https://github.com/tensorflow/playground/blob/master/src/nn.ts">library</a>
-      that meets the demands of this educational visualization. For real-world applications, consider the
-      <a href="https://www.tensorflow.org/">TensorFlow</a> library.
-      </p>
+      <h2 data-i18n="article.whatLibrary.title"></h2>
+      <p data-i18n="article.whatLibrary.content"></p>
     </div>
 
     <div class="l--body">
-      <h2>Credits</h2>
-      <p>
-        This was created by Daniel Smilkov and Shan Carter.
-        This is a continuation of many people’s previous work — most notably Andrej Karpathy’s <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html">convnet.js demo</a>
-        and Chris Olah’s <a href="http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/">articles</a> about neural networks.
-        Many thanks also to D. Sculley for help with the original idea and to Fernanda Viégas and Martin Wattenberg and the rest of the
-        <a href="https://research.google.com/bigpicture/">Big Picture</a> and <a href="https://research.google.com/teams/brain/">Google Brain</a> teams for feedback and guidance.
-      </p>
+      <h2 data-i18n="article.credits.title"></h2>
+      <p data-i18n="article.credits.content"></p>
     </div>
   </article>
 
@@ -397,5 +391,16 @@ limitations under the License.
   <script src="bundle.js"></script>
   <!-- Google analytics -->
   <script src="analytics.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (key) {
+          element.innerHTML = window.i18next.t(key);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

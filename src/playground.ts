@@ -28,6 +28,7 @@ import {
 import {Example2D, shuffle} from "./dataset";
 import {AppendingLineChart} from "./linechart";
 import * as d3 from 'd3';
+import i18next from './i18n';
 
 let mainWidth;
 
@@ -1119,3 +1120,5 @@ makeGUI();
 generateData(true);
 reset(true);
 hideControls();
+
+(window as any).i18next = i18next;
