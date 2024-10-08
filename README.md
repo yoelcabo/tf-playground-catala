@@ -1,23 +1,22 @@
-# Deep playground
+# TensorPlayground en català
 
-Deep playground is an interactive visualization of neural networks, written in
-TypeScript using d3.js. We use GitHub issues for tracking new requests and bugs.
-Your feedback is highly appreciated!
+El Tensorflow Playground és una visualització interactiva de xarxes neuronals, escrita en
+TypeScript utilitzant d3.js.
 
-**If you'd like to contribute, be sure to review the [contribution guidelines](CONTRIBUTING.md).**
+L'he traduït a català i en aquest repositori el mantinc.
 
-## Development
+El repositori original es troba a [tensorflow/playground](https://github.com/tensorflow/playground).
 
-To run the visualization locally, run:
-- `npm i` to install dependencies
-- `npm run build` to compile the app and place it in the `dist/` directory
-- `npm run serve` to serve from the `dist/` directory and open a page on your browser.
+## Desenvolupament
 
-For a fast edit-refresh cycle when developing run `npm run serve-watch`.
-This will start an http server and automatically re-compile the TypeScript,
-HTML and CSS files whenever they change.
+Per executar la visualització localment, executeu:
+- `npm i` per instal·lar les dependències
+- `npm run build` per compilar l'aplicació i col·locar-la al directori `dist/`
+- `npm run serve` per servir des del directori `dist/` i obrir una pàgina al vostre navegador.
 
-## For owners
-To push to production: `git subtree push --prefix dist origin gh-pages`.
+Per a un cicle ràpid d'edició-actualització durant el desenvolupament, executeu `npm run serve-watch`.
+Això iniciarà un servidor http i recompilarà automàticament els fitxers TypeScript,
+HTML i CSS cada vegada que canviïn.
 
-This is not an official Google product.
+## Per als propietaris
+Per pujar a producció: `git subtree push --prefix dist origin gh-pages`.
