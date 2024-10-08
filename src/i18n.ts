@@ -6,7 +6,7 @@ import caTranslations from '../public/locales/ca/translation.json';
 import esTranslations from '../public/locales/es/translation.json';
 
 i18next.init({
-  lng: 'en',
+  lng: 'ca',
   fallbackLng: 'en',
   debug: true,
   resources: {
