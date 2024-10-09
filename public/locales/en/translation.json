@@ -46,7 +46,12 @@
     "weightMixing": "The outputs are mixed with varying <b>weights</b>, shown by the thickness of the lines."
   },
   "hiddenLayers": {
-    "label": "Hidden layers"
+    "singular": "Hidden layer",
+    "plural": "Hidden layers"
+  },
+  "neuron": {
+    "singular": "neuron",
+    "plural": "neurons"
   },
   "output": {
     "title": "Output",

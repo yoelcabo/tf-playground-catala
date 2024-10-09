@@ -46,7 +46,12 @@
     "weightMixing": "Las salidas se mezclan con diferentes <b>pesos</b>, mostrados por el grosor de las líneas."
   },
   "hiddenLayers": {
-    "label": "Capas ocultas"
+    "singular": "Capa oculta",
+    "plural": "Capas ocultas"
+  },
+  "neuron": {
+    "singular": "neurona",
+    "plural": "neuronas"
   },
   "output": {
     "title": "Salida",

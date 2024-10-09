@@ -88,7 +88,7 @@ let HIDABLE_CONTROLS = [
   ["data.percTrainDataShort", "percTrainData"],
   ["data.noise", "noise"],
   ["data.batchSize", "batchSize"],
-  ["hiddenLayers.label", "numHiddenLayers"],
+  ["hiddenLayers.plural", "numHiddenLayers"],
 ];
 
 class Player {
@@ -697,10 +697,10 @@ function addPlusMinusControl(x: number, layerIdx: number) {
       .attr("class", "material-icons")
       .text("remove");
 
-  let suffix = state.networkShape[i] > 1 ? "s" : "";
-  div.append("div").text(
-    state.networkShape[i] + " neuron" + suffix
-  );
+  let neuronsText = state.networkShape[i] > 1 ? "neuron.plural" : "neuron.singular";
+  div.append("span").text(state.networkShape[i])
+    .append("span").text(" ")
+    .append("span").attr("data-i18n", neuronsText).text(i18next.t(neuronsText));
 }
 
 function updateHoverCard(type: HoverType, nodeOrLink?: nn.Node | nn.Link,
@@ -946,8 +946,8 @@ function reset(onStartup=false) {
   }
   player.pause();
 
-  let suffix = state.numHiddenLayers !== 1 ? "s" : "";
-  d3.select("#layers-label").text("Hidden layer" + suffix);
+  let hiddenLayersTextKey = state.numHiddenLayers !== 1 ? "hiddenLayers.plural" : "hiddenLayers.singular";
+  d3.select("#layers-label").text(i18next.t(hiddenLayersTextKey)).attr("data-i18n", hiddenLayersTextKey);
   d3.select("#num-layers").text(state.numHiddenLayers);
 
   // Make a simple network.

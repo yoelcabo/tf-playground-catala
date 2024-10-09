@@ -46,7 +46,12 @@
     "weightMixing": "Les sortides es barregen amb diferents <b>pesos</b>, mostrats pel gruix de les línies."
   },
   "hiddenLayers": {
-    "label": "Capes ocultes"
+    "singular": "Capa oculta",
+    "plural": "Capes ocultes"
+  },
+  "neuron": {
+    "singular": "neurona",
+    "plural": "neurones"
   },
   "output": {
     "title": "Sortida",
