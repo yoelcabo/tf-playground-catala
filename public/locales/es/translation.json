@@ -90,6 +90,9 @@
   },
   "hovercard": {
     "clickToEdit": "Haz clic en cualquier lugar para editar.",
-    "weightBias": "Peso/Sesgo"
-  }
+    "weightBias": "Peso/Sesgo",
+    "weight": "Peso de",
+    "bias": "Sesgo de"
+  },
+  "sourceOnGitHub": "Código en GitHub"
 }

@@ -90,6 +90,9 @@
   },
   "hovercard": {
     "clickToEdit": "Click anywhere to edit.",
-    "weightBias": "Weight/Bias"
-  }
+    "weightBias": "Weight/Bias",
+    "weight": "Weight is",
+    "bias": "Bias is"
+  },
+  "sourceOnGitHub": "Source on GitHub"
 }

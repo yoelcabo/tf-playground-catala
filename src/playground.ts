@@ -735,13 +735,13 @@ function updateHoverCard(type: HoverType, nodeOrLink?: nn.Node | nn.Link,
   let value = (type === HoverType.WEIGHT) ?
     (nodeOrLink as nn.Link).weight :
     (nodeOrLink as nn.Node).bias;
-  let name = (type === HoverType.WEIGHT) ? "Weight" : "Bias";
+  let name = (type === HoverType.WEIGHT) ? "hovercard.weight" : "hovercard.bias";
   hovercard.style({
     "left": `${coordinates[0] + 20}px`,
     "top": `${coordinates[1]}px`,
     "display": "block"
   });
-  hovercard.select(".type").text(name);
+  hovercard.select(".type").text(i18next.t(name)).attr("data-i18n", name);
   hovercard.select(".value")
     .style("display", null)
     .text(value.toPrecision(2));

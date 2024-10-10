@@ -90,6 +90,9 @@
   },
   "hovercard": {
     "clickToEdit": "Fes clic a qualsevol lloc per editar.",
-    "weightBias": "Pes/Biaix"
-  }
+    "weightBias": "Pes/Biaix",
+    "weight": "Pes de",
+    "bias": "Biaix de"
+  },
+  "sourceOnGitHub": "Codi a GitHub"
 }
