@@ -19,4 +19,10 @@ Això iniciarà un servidor http i recompilarà automàticament els fitxers Type
 HTML i CSS cada vegada que canviïn.
 
 ## Per als propietaris
-Per pujar a producció: `git subtree push --prefix dist origin gh-pages`.
+Per pujar a producció: 
+```
+rm .gitignore
+echo "nn.yoel.cat" >> dist/CNAME
+git push origin `git subtree split --prefix dist master`:gh-pages --force
+git checkout .gitignore
+```
